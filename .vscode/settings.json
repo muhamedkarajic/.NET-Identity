@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        ".gitignore": true,
+        ".vscode": true,
+        "app.db": true,
+        "bin": true,
+        "ClientApp/.editorconfig": true,
+        "ClientApp/.gitignore": true,
+        "ClientApp/browserslist": true,
+        "ClientApp/node_modules": true,
+        "ClientApp/src/assets/.gitkeep": true,
+        "obj": true
+    }
+}

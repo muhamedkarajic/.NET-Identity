@@ -1,0 +1,7 @@
+
+<form [formGroup]="loginForm">
+  <reactive-input [control]="loginForm.controls.email" [placeholder]="'Enter email'" [label]="'Email address'"></reactive-input>
+  <reactive-input [control]="loginForm.controls.password" [placeholder]="'Enter password'" [label]="'Password'" [type]="'password'"></reactive-input>
+  <reactive-input [control]="loginForm.controls.isPersistent" [label]="'Remember me'" [name]="'isPersistent'" [type]="'checkbox'"></reactive-input>
+  <button (click)="submitForm()" [disabled]="!loginForm.valid" class="btn btn-primary">Submit</button>
+</form>
