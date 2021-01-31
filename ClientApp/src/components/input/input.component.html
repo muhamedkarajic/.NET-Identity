@@ -10,31 +10,8 @@
   </ng-template>
 
   <div *ngIf="control.invalid && control.errors && (control.dirty || control.touched)">
-    <small class="text-danger"
-        *ngIf="control.hasError('required')">
-        This field is required.
-    </small>
-    <small class="text-danger"
-        *ngIf="control.hasError('email')">
-        Email is not valid. <br>
-    </small>
-    <small class="text-danger" *ngIf="control.hasError('minlength')">
-        Minimum lenght of {{control.errors.minlength.requiredLength}} required. <br>
-    </small>
-    <small class="text-danger" *ngIf="control.hasError('maxlength')">
-        Maximum lenght of {{control.errors.maxlength.requiredLength}} allowed. <br>
-    </small>
-    <small class="text-danger" *ngIf="control.hasError('hasNumber')">
-        Password needs to have at least 1 number. <br>
-    </small>
-    <small class="text-danger" *ngIf="control.hasError('hasCapitalCase')">
-        Password needs to have at least 1 capital character. <br>
-    </small>
-    <small class="text-danger" *ngIf="control.hasError('hasSmallCase')">
-        Password needs to have at least 1 small character. <br>
-    </small>
-    <small class="text-danger" *ngIf="control.hasError('hasSpecialCharacters')">
-        Password needs to have at least 1 simbol. <br>
+    <small class="text-danger">
+      {{printError()}}
     </small>
  </div>
 </div>
