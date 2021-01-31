@@ -18,22 +18,22 @@ export abstract class CustomValidators {
     return JSON.stringify(control.errors);
   }
 
-  static get email() {
+  static get email(): ValidatorFn {
     return CustomValidators.patternValidator(
       /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
       { email: true }
     );
   }
 
-  static get hasNumber() {
+  static get hasNumber(): ValidatorFn {
     return CustomValidators.patternValidator(/\d/, { hasNumber: true });
   }
 
-  static get hasCapitalCase() {
+  static get hasCapitalCase(): ValidatorFn {
     return CustomValidators.patternValidator(/[A-Z]/, { hasCapitalCase: true });
   }
 
-  static get hasSmallCase() {
+  static get hasSmallCase(): ValidatorFn {
     return CustomValidators.patternValidator(/[a-z]/, { hasSmallCase: true });
   }
 
