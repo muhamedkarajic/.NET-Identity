@@ -15,6 +15,7 @@ import { GlobalVariables } from 'src/shared/variables';
 export class LoginComponent {
   loginForm = null;
   constructor(private fb: FormBuilder, private client: HttpClient, private router: Router) {
+
     this.loginForm = this.fb.group({
       email: new FormControl('', [Validators.required, CustomValidators.email]),
       password: new FormControl('', [
