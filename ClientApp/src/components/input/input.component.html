@@ -1,11 +1,11 @@
 <div class="form-group">
   <div *ngIf="type == 'checkbox'; else otherInput" class="form-check no-select">
     <input [formControl]="control" [id]="name" type="checkbox" class="form-check-input cp">
-    <label class="cp" [for]="name">{{label}}{{isRequiredControl() ? '*' : undefined}}</label>
+    <label class="cp" [for]="name">{{label}}{{requiredSuffix()}}</label>
   </div>
 
   <ng-template #otherInput>
-    <label *ngIf="type != 'checkbox'" [for]="name">{{label}}{{isRequiredControl() ? '*' : undefined}}</label>
+    <label *ngIf="type != 'checkbox'" [for]="name">{{label}}{{requiredSuffix()}}</label>
     <input *ngIf="type != 'checkbox'" class="form-control" [type]="type" [formControl]="control" [placeholder]="placeholder" [name]="name">
   </ng-template>
 

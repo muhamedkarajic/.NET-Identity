@@ -22,4 +22,8 @@ export class InputComponent {
     }
     return false;
   }
+
+  requiredSuffix(): string {
+    return this.isRequiredControl() ? '*' : undefined;
+  }
 }
