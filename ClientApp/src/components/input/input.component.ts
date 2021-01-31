@@ -15,15 +15,11 @@ export class InputComponent {
   @Input() control: FormControl;
   public printError = CustomValidators.printError;
 
-  isRequiredControl(): boolean {
+  requiredSuffix(): string {
     if (this.control.validator) {
       const validation = this.control.validator(new FormControl());
-      return validation !== null && validation.required === true;
+      return validation !== null && validation.required === true ? '*' : undefined;
     }
-    return false;
-  }
-
-  requiredSuffix(): string {
-    return this.isRequiredControl() ? '*' : undefined;
+    return undefined;
   }
 }
